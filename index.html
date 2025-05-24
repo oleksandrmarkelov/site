@@ -6,6 +6,10 @@
     <title>Swissstarnode - Professional Validator & Web3 Infrastructure</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Solana Web3 Dependencies -->
+    <script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.min.js"></script>
+    <script src="https://unpkg.com/@solana/wallet-adapter-base"></script>
+    <script src="https://unpkg.com/@solana/wallet-adapter-phantom"></script>
 </head>
 <body>
     <header class="header">
@@ -16,6 +20,7 @@
                     <p class="tagline">Professional Validator & Web3 Infrastructure</p>
                 </div>
                 <div class="contact-info">
+                    <button id="wallet-connect" class="wallet-button">Connect Wallet</button>
                     <a href="mailto:contact@swissstarnode.tech" class="contact-button">Contact Us</a>
                 </div>
             </nav>
@@ -140,5 +145,41 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // Solana Wallet Connection
+        let wallet = null;
+        let publicKey = null;
+
+        async function connectWallet() {
+            try {
+                if (!window.solana || !window.solana.isPhantom) {
+                    alert('Phantom wallet is not installed. Please install it from https://phantom.app/');
+                    return;
+                }
+
+                const response = await window.solana.connect();
+                publicKey = response.publicKey.toString();
+                wallet = window.solana;
+                
+                const walletButton = document.getElementById('wallet-connect');
+                walletButton.textContent = publicKey.slice(0, 4) + '...' + publicKey.slice(-4);
+                walletButton.classList.add('connected');
+                
+                // Listen for wallet disconnection
+                wallet.on('disconnect', () => {
+                    publicKey = null;
+                    wallet = null;
+                    walletButton.textContent = 'Connect Wallet';
+                    walletButton.classList.remove('connected');
+                });
+            } catch (err) {
+                console.error(err);
+                alert('Failed to connect to wallet: ' + err.message);
+            }
+        }
+
+        document.getElementById('wallet-connect').addEventListener('click', connectWallet);
+    </script>
 </body>
 </html>
