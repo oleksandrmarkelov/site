@@ -63,7 +63,7 @@
             <div class="container">
                 <h2>Active Networks</h2>
                 <p class="total-value">Total Value Staked: 26,560,600</p>
-                
+
                 <div class="networks-grid">
                     <!-- Mainnet Networks -->
                     <h3 class="network-category">Mainnet</h3>
@@ -88,34 +88,22 @@
                             <img src="images/eigen.png" alt="Eigen" />
                             <span class="network-name">Eigen</span>
                         </a>
-                        <a href="https://explorer.subspace.network/gemini-3h/consensus/accounts/stByR2yxcpwxWJG4JumTcoJwUcJy3UKKYJfE7PAEz8c6pErZf" class="network-card" target="_blank">
+                        <a href="https://astral.autonomys.xyz/mainnet/consensus/accounts/sugnJus5fbK5Qe98GVkeyTpvrJb7TJ4mM8mY5cQtW5S28TaAB" class="network-card" target="_blank">
                             <img src="images/subspace.png" alt="Subspace" />
                             <span class="network-name">Subspace</span>
-                        </a>
-                        <a href="https://explorer.stavr.tech/Side-Mainnet/staking/sidevaloper1qqx3k9cqruts7yskzc8pxqq8pcqqjzc0zuyqupstzyrpjqqezur3s32hc54" class="network-card" target="_blank">
-                            <img src="images/side.png" alt="Side" />
-                            <span class="network-name">Side</span>
                         </a>
                         <a href="https://explorer.voi.network/explorer/account/TMEF56RIH3LGCRSNWCIFABD6WJHVN5TYLGXA2ZWQY7LEIXXXZBSKF6G6OQ/transactions" class="network-card" target="_blank">
                             <img src="images/voi.png" alt="Voi" />
                             <span class="network-name">Voi</span>
-                        </a>
-                        <a href="https://mcnscan.io/validator/NodeID-NB9Bqb13uHfsUG7WgRA6DGJBaqr9d5hNh" class="network-card" target="_blank">
-                            <img src="images/juneo.png" alt="Juneo" />
-                            <span class="network-name">Juneo</span>
                         </a>
                     </div>
 
                     <!-- Testnet Networks -->
                     <h3 class="network-category">Testnet</h3>
                     <div class="network-cards">
-                        <a href="https://testnets.cosmosrun.info/prysm/staking/prysmvaloper1ltm8qu0t9fl7rgcy86erdqhpj4wdsecn7ucp0r" class="network-card" target="_blank">
-                            <img src="images/pryzm.png" alt="Pryzm" />
-                            <span class="network-name">Pryzm</span>
-                        </a>
-                        <a href="https://testnet.itrocket.net/galactica/staking/galavaloper16sdywsqs4w96j5u9x9t7wan46qg9yeszxym65v" class="network-card" target="_blank">
-                            <img src="images/gal.png" alt="Galactica" />
-                            <span class="network-name">Galactica</span>
+                        <a href="https://testnet2.gmonads.com/validators" class="network-card" target="_blank">
+                            <img src="images/monad.png" alt="Monad" />
+                            <span class="network-name">Monad</span>
                         </a>
                     </div>
                 </div>
@@ -157,11 +145,11 @@
                 const response = await window.solana.connect();
                 publicKey = response.publicKey.toString();
                 wallet = window.solana;
-                
+
                 const walletButton = document.getElementById('wallet-connect');
                 walletButton.textContent = publicKey.slice(0, 4) + '...' + publicKey.slice(-4);
                 walletButton.classList.add('connected');
-                
+
                 // Listen for wallet disconnection
                 wallet.on('disconnect', () => {
                     publicKey = null;
