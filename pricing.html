@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVT Pricing Calculation - Swissstarnode</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="logo">
+                    <h1>Swissstarnode</h1>
+                    <p class="tagline">Professional Validator & Web3 Infrastructure</p>
+                </div>
+                <div class="contact-info">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="tokenomics.html" class="nav-link">Tokenomics</a>
+                    <a href="mailto:contact@swissstarnode.tech" class="contact-button">Contact Us</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>SVT Token Pricing Calculation</h2>
+                <p>How the Token Price is Determined</p>
+            </div>
+        </section>
+
+        <section class="pricing-content">
+            <div class="container">
+                <div class="detail-section">
+                    <h3>Calculation Period</h3>
+                    <p>The SVT token price calculation is based on validator performance and token prices over the period from <strong>September 15th to November 24th, 2025</strong>.</p>
+                </div>
+
+                <div style="margin: 120px 0 40px; text-align: center; opacity: 0.7;">
+                    <span style="display: inline-block; width: 60%; border-bottom: 1px solid rgba(255, 255, 255, 0.25);"></span>
+                </div>
+
+                <div class="detail-section">
+                    <h3>Income by Blockchain (10-week period)</h3>
+                    <p>Projected income over the 10-week period is based on the token allocations and average prices per network:</p>
+                    
+                    <div class="pricing-table-container">
+                        <table class="pricing-table">
+                            <thead>
+                                <tr>
+                                    <th>Blockchain</th>
+                                    <th>Tokens Allocated</th>
+                                    <th>Average Price (USDC)</th>
+                                    <th>Reference</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>NEAR Protocol</strong></td>
+                                    <td>&nbsp;&nbsp;&nbsp;172 Near</td>
+                                    <td>&nbsp;&nbsp;&nbsp;$2.05</td>
+                                    <td><a href="https://near-staking.com/user/swissstar.near" target="_blank">View Validator</a></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Solana</strong></td>
+                                    <td>&nbsp;&nbsp;&nbsp;33 Sol - 6 Sol (payment for stake to 2z and Vault)</td>
+                                    <td>&nbsp;&nbsp;&nbsp;$174.00</td>
+                                    <td><a href="https://svt.one/report/2ZiMfQaT59j86HVWCvspuMtBotnVBeTc3BKk3kKpwgKP" target="_blank">View Validator Report</a></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Realio</strong></td>
+                                    <td>&nbsp;&nbsp;&nbsp;660 Realio</td>
+                                    <td>&nbsp;&nbsp;&nbsp;$0.18</td>
+                                    <td><a href="https://explorer.stavr.tech/Realio-Mainnet/staking/realiovaloper180f895843fx8dx0trvaz3c2lz6t0x0dc7hwe47" target="_blank">View Validator</a></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Lido</strong></td>
+                                    <td>&nbsp;&nbsp;&nbsp;0.15 wstETH</td>
+                                    <td>&nbsp;&nbsp;&nbsp;$3,626.00</td>
+                                    <td><a href="https://etherscan.io/tx/0x695daedcda8e04b42896fff6b5a67c44ef8fd5282062182287fe4129225ffb27" target="_blank">View Transaction</a></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Monad</strong></td>
+                                    <td>&nbsp;&nbsp;&nbsp;expected 60000 MON</td>
+                                    <td>&nbsp;&nbsp;&nbsp;0.025</td>
+                                    <td><a href="https://gmonads.com/validators" target="_blank">View Validator</a></td>
+                                </tr>
+                                <tr class="income-row">
+                                    <td colspan="3"><strong>Total expected 10-week income (including expected Monad)</strong></td>
+                                    <td><strong>7,213.30 USDC</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div style="margin: 120px 0 40px; text-align: center; opacity: 0.7;">
+                    <span style="display: inline-block; width: 60%; border-bottom: 1px solid rgba(255, 255, 255, 0.25);"></span>
+                </div>
+
+                <div class="detail-section">
+                    <h3>Server Costs</h3>
+                    <p>Server infrastructure costs are estimated per month and then scaled to the 10-week period (2.25 months):</p>
+                    
+                    <div class="pricing-table-container">
+                        <table class="pricing-table">
+                            <thead>
+                                <tr>
+                                    <th>Network(s)</th>
+                                    <th>Description</th>
+                                    <th>Amount (USDC)</th>
+                                    <th>Period</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>NEAR, Realio & Lido</strong></td>
+                                    <td>&nbsp;&nbsp;&nbsp;Shared server</td>
+                                    <td>&nbsp;&nbsp;&nbsp;92.00</td>
+                                    <td>per month</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Solana</strong></td>
+                                    <td>&nbsp;&nbsp;&nbsp;3 servers — testnet 125, mainnet 470, reserve 325</td>
+                                    <td>&nbsp;&nbsp;&nbsp;920.00</td>
+                                    <td>per month</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Monad</strong></td>
+                                    <td>&nbsp;&nbsp;&nbsp;2 servers at 125 USDC each</td>
+                                    <td>&nbsp;&nbsp;&nbsp;250.00</td>
+                                    <td>per month</td>
+                                </tr>
+                                <tr class="income-row">
+                                    <td colspan="3"><strong>Total monthly server cost</strong></td>
+                                    <td><strong>1,262.00 USDC</strong></td>
+                                </tr>
+                                <tr class="income-row">
+                                    <td colspan="3"><strong>Total server cost for 10-week period (monthly × 2.25)</strong></td>
+                                    <td><strong>2,839.50 USDC</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div style="margin: 120px 0 40px; text-align: center; opacity: 0.7;">
+                    <span style="display: inline-block; width: 60%; border-bottom: 1px solid rgba(255, 255, 255, 0.25);"></span>
+                </div>
+
+                <div class="detail-section">
+                    <h3>Profit & SVT Token Price</h3>
+                    <div class="pricing-table-container">
+                        <table class="pricing-table">
+                            <thead>
+                                <tr>
+                                    <th>Item</th>
+                                    <th>Value</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Total expected 10-week income</td>
+                                    <td>&nbsp;&nbsp;&nbsp;7,213.30 USDC</td>
+                                </tr>
+                                <tr>
+                                    <td>Total 10-week server costs</td>
+                                    <td>&nbsp;&nbsp;&nbsp;2,839.50 USDC</td>
+                                </tr>
+                                <tr>
+                                    <td>Projected 10-week profit</td>
+                                    <td>&nbsp;&nbsp;&nbsp;4,373.80 USDC</td>
+                                </tr>
+                                <tr class="income-row">
+                                    <td><strong>Initial SVT price (per token)</strong></td>
+                                    <td><strong>≈ 2 USDC</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="formula-box">
+                        <p><strong>Initial SVT price formula:</strong> (Projected 10-week profit ÷ 1000) × 0.45</p>
+                        <p>For this period: (4,373.80 ÷ 1000) × 0.45 ≈ rounded to <strong>2 USDC per SVT</strong>.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-social">
+                    <a href="https://twitter.com/swissstar_node" target="_blank" class="social-link">Twitter</a>
+                </div>
+                <div class="footer-info">
+                    <p class="copyright">© <script>document.write(new Date().getFullYear())</script> Swissstarnode. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
